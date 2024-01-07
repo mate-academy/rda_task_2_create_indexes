@@ -42,5 +42,7 @@ jobs:
           echo "errors found: "
           then echo $errors
           exit 1
+        then
+          echo "no errors found"
         fi
         
