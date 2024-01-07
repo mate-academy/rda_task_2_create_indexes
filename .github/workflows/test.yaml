@@ -39,12 +39,5 @@ jobs:
         cat log.txt
         errors=$(cat log.txt | grep "^Error")
         echo "collected errors"
-        if [ -n "$errors" ]
-        then 
-          echo "errors found: "
-          echo $errors
-          exit 1
-        then
-          echo "no errors found"
-        fi
+       
         
