@@ -36,8 +36,7 @@ jobs:
       shell: bash
       run: |
         echo "checking the test log:"
-        cat log.txt
-        cat log.txt | grep "^Error"
-        echo "collected errors"
+        errors=$(cat log.txt | grep "^Error" || true)
+        if [ -n "$errors" ]; then echo $errors && exit 1; fi
        
         
