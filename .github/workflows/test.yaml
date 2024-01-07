@@ -38,6 +38,7 @@ jobs:
         echo "checking the test log:"
         cat log.txt
         errors=$(cat log.txt | grep "^Error")
+        echo "collected errors"
         if [ -n "$errors" ]
         then 
           echo "errors found: "
