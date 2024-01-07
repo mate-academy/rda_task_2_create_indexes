@@ -37,7 +37,7 @@ jobs:
       run: |
         echo "checking the test log:"
         cat log.txt
-        errors=$(cat log.txt | grep "^Error")
+        cat log.txt | grep "^Error"
         echo "collected errors"
        
         
