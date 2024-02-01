@@ -3,4 +3,4 @@ USE ShopDB;
 
 CREATE INDEX email ON Customers (Email); 
 
-CREATE INDEX products ON Products (Name); 
+CREATE INDEX products ON Products (Name);
