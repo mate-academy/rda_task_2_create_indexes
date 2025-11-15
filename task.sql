@@ -5,3 +5,4 @@ USE ShopDB;
 CREATE INDEX email_search ON Customers(Email);
 
 CREATE INDEX products ON Products(Name);
+ 
