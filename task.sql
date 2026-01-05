@@ -1,4 +1,4 @@
-CREATE UNIQUE INDEX idx_customers_email ON Customers(Email);
-CREATE INDEX idx_products_price_warehouse ON Products(Price, WarehouseAmount);
-CREATE INDEX idx_orders_date ON Orders(Date);
-CREATE INDEX idx_orderitems_order_product ON OrderItems(OrderID, ProductID);
+CREATE UNIQUE INDEX Email ON Customers(Email);
+CREATE INDEX Name ON Products(Name);
+CREATE INDEX Date ON Orders(Date);
+CREATE INDEX OrderID_ProductID ON OrderItems(OrderID, ProductID);
