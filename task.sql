@@ -1,12 +1,17 @@
+CREATE DATABASE IF NOT EXISTS ShopDB;
 USE ShopDB;
 
--- Customers login by email
+-- IMPORTANT:
+-- Run this script on an empty database.
+-- Tables must be empty, otherwise UNIQUE index creation may fail.
+
+-- Login by email
 CREATE UNIQUE INDEX Email ON Customers(Email);
 
--- Product search by name
+-- Search product by name
 CREATE INDEX Name ON Products(Name);
 
--- Foreign key indexes for fast joins
+-- Indexes for foreign keys (speed up JOINs)
 CREATE INDEX CustomerID ON Orders(CustomerID);
 
 CREATE INDEX OrderID ON OrderItems(OrderID);
