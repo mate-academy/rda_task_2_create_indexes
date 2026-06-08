@@ -10,12 +10,14 @@ CREATE TABLE Products (
 );
 
 CREATE TABLE Customers (
-    ID INT AUTO_INCREMENT PRIMARY KEY,,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Email VARCHAR(50),
     Address VARCHAR(100)
 );
+
+CREATE INDEX Email ON Customers (Email);
 
 CREATE TABLE Orders (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -32,6 +34,7 @@ CREATE TABLE OrderItems (
     FOREIGN KEY (ProductID) REFERENCES Products(ID) ON DELETE SET NULL
 );
 
-CREATE INDEX idx_name ON Products (Name);
-CREATE INDEX idx_price ON Products (Price);
-CREATE INDEX idx_customer ON Customers (Email);
+CREATE INDEX Name ON Products (Name);
+CREATE INDEX CustomerID ON Orders (CustomerID);
+CREATE INDEX OrderID ON OrderItems (OrderID);
+CREATE INDEX ProductID ON OrderItems (ProductID);
