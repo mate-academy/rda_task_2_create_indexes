@@ -1,2 +1,9 @@
-# Write your SQL code for the database creation here. Good luck! 
-USE ShopDB; 
+CREATE INDEX Name ON Products (Name);
+CREATE INDEX Price ON Products (Price);
+CREATE INDEX WarehouseAmount ON Products (WarehouseAmount);
+CREATE INDEX Email ON Customers (Email);
+CREATE INDEX Address ON Customers (Address);
+CREATE INDEX CustomerID ON Orders (CustomerID);
+CREATE INDEX Date ON Orders (Date);
+CREATE INDEX OrderID ON OrderItems (OrderID);
+CREATE INDEX ProductID ON OrderItems (ProductID);
