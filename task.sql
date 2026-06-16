@@ -1,3 +1,4 @@
+USE ShopDB; 
 -- Логін: пошук клієнта по email
 CREATE INDEX Email ON Customers(Email);
 
