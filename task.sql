@@ -2,7 +2,5 @@
 
 USE ShopDB; 
 
-create index Email on Customers (Email)
-create index Name on Products (Name)
-
-
+create index Email on Customers (Email);
+create index Name on Products (Name);
